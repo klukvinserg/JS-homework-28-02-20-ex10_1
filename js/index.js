@@ -41,15 +41,22 @@ if ((year % 4 === 0 && year % 100 != 0) || year % 400 ===0) {
    b = "normal"
 }
 
-if (month === 2 &&  b === "normal" && day > 28 ) {
+while (day < 1 || day > 31 || isNaN(day)) {
     alert('Day is not correct');
+    massege();
+ }
+
+ if (month === 2 &&  b === "normal" && day > 28 ) {
+    alert('Day is not correct - max 28');
     massege();
 }
 
 if (month === 2 &&  b === "leap" && day > 29 ) {
-    alert('Day is not correct');
+    alert('Day is not correct - year is leap. max 29');
     massege();
 }
+
+
 
 let nextDate = new Date(year, month-1, day);
 nextDate.setDate(nextDate.getDate() + 1);
