@@ -35,16 +35,16 @@ while (month < 1 || month > 12 || isNaN(month)) {
     massege();
  }
 
+ while (day < 1 || day > 31 || isNaN(day)) {
+    alert('Day is not correct');
+    massege();
+ }
+
 if ((year % 4 === 0 && year % 100 != 0) || year % 400 ===0) {
    b = "leap"
 } else {
    b = "normal"
 }
-
-while (day < 1 || day > 31 || isNaN(day)) {
-    alert('Day is not correct');
-    massege();
- }
 
  if (month === 2 &&  b === "normal" && day > 28 ) {
     alert('Day is not correct - max 28');
